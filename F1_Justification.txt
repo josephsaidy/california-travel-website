@@ -1,0 +1,10 @@
+Layout Changes Justification
+
+No changes were made to the original layouts from Task 1. 
+The overall structure, navigation, and page organization stayed the same. 
+I only added extra content to the city pages 
+(anchor links in the Explore section and short sections for 
+Attractions, Parks, Museums, and Food) 
+and updated the incorporation year for Sacramento. 
+
+These were content changes and did not affect the layout design.

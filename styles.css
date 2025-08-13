@@ -57,3 +57,5 @@ img {
   width: 300px;
   height: auto;
 }
+
+.layout-thumb{width:340px;height:auto;margin:6px;border:1px solid #ddd;border-radius:6px}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact — Ask a Question</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+<header>
+  <div class="site-wrap">
+    <h1>California</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sacramento.html">Sacramento</a>
+      <a href="san-diego.html">San Diego</a>
+      <a href="los-angeles.html">Los Angeles</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="site-wrap">
+  <h2>Ask a Question</h2>
+  <form id="contactForm" novalidate>
+    <label for="first">First Name</label>
+    <input id="first" name="first" type="text" required>
+
+    <label for="last">Last Name</label>
+    <input id="last" name="last" type="text" required>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="confirmEmail">Confirm Email</label>
+    <input id="confirmEmail" name="confirmEmail" type="email" required>
+
+    <label for="question">Your Question</label>
+    <textarea id="question" name="question" rows="5" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+<footer>
+  <div class="site-wrap">
+    <small>&copy; 2025 California Info (class project)</small>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

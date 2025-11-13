@@ -1,3 +1,15 @@
+:root{
+  --brand:#14365d;
+  --brand-dark:#0c2440;
+  --ink:#222;
+  --bg:#f7f7f7;
+  --card:#fafafa;
+}
+body{ color:var(--ink); background:var(--bg); }
+header{ background:var(--brand); }
+nav a:hover, nav a.active{ background:var(--brand-dark); }
+.card{ background:var(--card); }
+
 *{box-sizing:border-box}
 
 body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#222;background:#f7f7f7}
@@ -51,7 +63,10 @@ input[type="text"],input[type="email"],textarea{width:100%;padding:10px;border:1
 
 button{margin-top:14px;padding:10px 14px;border:0;border-radius:4px;background:#14365d;color:#fff;cursor:pointer}
 
-button:hover{opacity:.9}
+button:hover{
+  background: var(--brand-dark);
+  color: #fff;
+}
 
 img {
   width: 300px;

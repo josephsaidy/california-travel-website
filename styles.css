@@ -1,10 +1,12 @@
-
+/* RESET + GLOBAL TRANSITIONS*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all .15s ease;
 }
 
+/* THEME TOKENS */
 :root {
   --brand: #14365d;
   --brand-dark: #0c2440;
@@ -18,6 +20,7 @@
   --shadow: 0 4px 14px rgba(0,0,0,.08);
 }
 
+/* GLOBAL TYPOGRAPHY & PAGE */
 body {
   font-family: Inter, Arial, sans-serif;
   background: var(--bg-soft);
@@ -25,8 +28,10 @@ body {
   line-height: 1.6;
 }
 
+/* LAYOUT WRAPPER */
 .site-wrap{width:92%;max-width:1100px;margin:0 auto}
 
+/* HEADER & NAVIGATION */
 header {
   background: var(--brand);
   padding: 20px 0;
@@ -61,8 +66,12 @@ nav a:visited {
 
 nav a.active{background:#0c2440;color:#fff}
 
+
+/* BADGES */
 .badge{position:absolute;top:12px;right:12px;background:#ffcc00;color:#14365d;font-weight:bold;padding:4px 8px;border-radius:3px}
 
+
+/* MAIN CONTENT & SECTIONS */
 main {
   background: #fff;
   padding: 40px 0;
@@ -72,12 +81,16 @@ section {
   margin-bottom: 40px;
 }
 
+
+/* HERO & CARDS */
 .hero-img{width:100%;height:auto;border-radius:6px}
 
 #hero{position:relative;top:2px}
 
 .card{background:#fafafa;border:1px solid #e5e5e5;padding:12px;border-radius:6px;margin:14px 0}
 
+
+/* TABLES */
 .table-wrap{overflow-x:auto}
 
 table{width:100%;border-collapse:collapse}
@@ -86,6 +99,8 @@ th,td{border:1px solid #ddd;padding:8px;text-align:left}
 
 thead th{background:#f0f4fa}
 
+
+/* CONTENT LAYOUT (MAIN + ASIDE) */
 .content-with-aside{margin-top:16px}
 
 .main-col{width:70%;float:left}
@@ -94,13 +109,24 @@ thead th{background:#f0f4fa}
 
 .clearfix::after{content:"";display:block;clear:both}
 
+
+/* CITY IMAGES */
 .city-img{width:100%;max-height:360px;object-fit:cover;border-radius:6px;margin:8px 0}
 form{max-width:520px}
+
+.card:hover,
+.city-img:hover,
+.hero-img:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
 
 label{display:block;margin-top:10px}
 
 input[type="text"],input[type="email"],textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:4px}
 
+
+/* BUTTONS */
 button {
   background: var(--brand);
   border: none;
@@ -118,4 +144,5 @@ button:hover {
   box-shadow: var(--shadow);
 }
 
+/* LAYOUT THUMBNAILS (Task screenshots) */
 .layout-thumb{width:340px;height:auto;margin:6px;border:1px solid #ddd;border-radius:6px}

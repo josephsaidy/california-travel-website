@@ -90,14 +90,45 @@ section {
 .card{background:#fafafa;border:1px solid #e5e5e5;padding:12px;border-radius:6px;margin:14px 0}
 
 
-/* TABLES */
-.table-wrap{overflow-x:auto}
+/* TABLES & INFO BLOCKS*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
 
-table{width:100%;border-collapse:collapse}
+thead th {
+  background: var(--brand);
+  color: #fff;
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
 
-th,td{border:1px solid #ddd;padding:8px;text-align:left}
+td, th {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e6e6e6;
+}
 
-thead th{background:#f0f4fa}
+tbody tr:hover {
+  background: #f7f9fc;
+  transition: background .2s ease;
+}
+
+.info-block h2 {
+  margin-bottom: 12px;
+}
+
+.facts li {
+  margin-bottom: 8px;
+  padding-left: 8px;
+  border-left: 3px solid var(--brand);
+}
 
 
 /* CONTENT LAYOUT (MAIN + ASIDE) */
@@ -146,3 +177,32 @@ button:hover {
 
 /* LAYOUT THUMBNAILS (Task screenshots) */
 .layout-thumb{width:340px;height:auto;margin:6px;border:1px solid #ddd;border-radius:6px}
+
+
+/* RESPONSIVE LAYOUT (FOR MOBILES) */
+@media (max-width: 768px) {
+
+  /* Drop the two-column layout into a single column */
+  .main-col,
+  .side-col {
+    width: 100%;
+    float: none;
+    margin: 0 0 20px 0;
+  }
+
+  /* Reduce nav spacing so it wraps nicely */
+  nav {
+    gap: 8px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  /* Ensure layout thumbnails/images scale correctly */
+  .layout-thumb,
+  .city-img,
+  .hero-img {
+    width: 100%;
+  }
+}

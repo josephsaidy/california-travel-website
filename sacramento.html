@@ -28,7 +28,7 @@
   <article class="city">
     <h2>Sacramento (Capital)</h2>
     <img src="images/sacramento.jpg" alt="Downtown Sacramento and the Tower Bridge" class="city-img">
-    <section>
+    <section class="info-block card">
       <h3>City Facts</h3>
         <ul class="facts">
           <li><strong>Population:</strong> ~525,000</li>
@@ -39,9 +39,13 @@
           <li><strong>Median household income (California):</strong> $96,334</li>
           <li><strong>Comparison:</strong> Below state average</li>
         </ul>
-
-
     </section>
+
+    <section class="card">
+      <h2>Income Comparison</h2>
+      <canvas id="incomeChart"></canvas>
+    </section>
+
 
     <section id="attractions">
       <h4>Attractions</h4>
@@ -105,5 +109,32 @@
     <small>&copy; 2025 Joseph Saidy · California Info Project</small>
   </div>
 </footer>
+
+<!-- Chart.js for income comparison graph -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('incomeChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Sacramento', 'California'],
+    datasets: [{
+      label: 'Median Household Income ($)',
+      data: [83753, 96334],
+      backgroundColor: ['#14365d', '#ffcc00']
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { display: false }
+    },
+    scales: {
+      y: { beginAtZero: true }
+    }
+  }
+});
+</script>
+
 </body>
 </html>

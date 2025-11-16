@@ -28,7 +28,7 @@
   <article class="city">
     <h2>San Diego</h2>
     <img src="images/san-diego.jpg" alt="San Diego skyline and bay" class="city-img">
-    <section>
+    <section class="info-block card">
       <h3>City Facts</h3>
       <ul class="facts">
         <li><strong>Population:</strong> ~1,380,000</li>
@@ -39,8 +39,13 @@
         <li><strong>Median household income (California):</strong> $96,334</li>
         <li><strong>Comparison:</strong> Above state average</li>
       </ul>
-
     </section>
+
+    <section class="card">
+      <h2>Income Comparison</h2>
+      <canvas id="incomeChart"></canvas>
+    </section>
+
 
     <section id="attractions">
       <h4>Attractions</h4>
@@ -103,5 +108,33 @@
     <small>&copy; 2025 Joseph Saidy · California Info Project </small>
   </div>
 </footer>
+
+<!-- Chart.js for income comparison graph -->
+<!-- Script for San Diego income comparison chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('incomeChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['San Diego', 'California'],
+    datasets: [{
+      label: 'Median Household Income ($)',
+      data: [104321, 96334],  // San Diego vs State
+      backgroundColor: ['#14365d', '#ffcc00']
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { display: false }
+    },
+    scales: {
+      y: { beginAtZero: true }
+    }
+  }
+});
+</script>
+
 </body>
 </html>

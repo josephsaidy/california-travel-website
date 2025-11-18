@@ -211,6 +211,49 @@ label{display:block;margin-top:10px}
 input[type="text"],input[type="email"],textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:4px}
 
 
+/* Home page landmark grid */
+.landmark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.landmark img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.landmark h4 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.landmark p {
+  font-size: 0.95rem;
+}
+
+/* Pill-style list for foods */
+.pill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 0;
+}
+
+.pill-list li {
+  background: #f3f5fb;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+}
+
+
 /* BUTTONS */
 button {
   background: var(--brand);

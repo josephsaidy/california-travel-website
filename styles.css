@@ -189,6 +189,38 @@ tbody tr:hover {
   border-left: 3px solid var(--brand);
 }
 
+/* MAIN PAGE ABOUT - DID YOU KNOW SPLIT SECTION */
+.split-section {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.split-left p + p {
+  margin-top: 10px;
+}
+
+.fact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.fact-list li {
+  margin-bottom: 8px;
+  padding-left: 10px;
+  border-left: 3px solid var(--brand);
+  font-size: 0.98rem;
+}
+
+/* stack on mobile */
+@media (max-width: 768px) {
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* CONTENT LAYOUT (MAIN + ASIDE) */
 .content-with-aside{margin-top:16px}
